@@ -1,0 +1,127 @@
+@charset "UTF-8";
+html {
+	overflow-y: scroll;
+	/* 画面に収まりきらなかった時にスクロールして表示することを許可するか否か*/
+}
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+li {
+	list-style: none;
+}
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+
+body {
+	font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+}
+
+/* ----------------------------------------------------------- */
+
+body header #about,#gallery,#info,#faq{
+	width: 80%;
+	margin: 0 auto;
+}
+
+header{
+	width: 100%;
+	height: 70px;
+	background-color:rgb(236, 224, 156);
+	color: black;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	}
+header nav{
+	width: 50%;
+}
+header ul{
+	display: flex;
+	justify-content: space-around;
+}
+
+#mainVisual{
+	width: 100%;
+	height: 85vh;
+	background-image: url("../img/arshad-pooloo-GdwWrLHdwpw-unsplash.jpg");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	color: whitesmoke;
+}
+#about, #info{
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+	padding: 50px;
+}
+
+#about img{
+	width: 50%;
+	height: 400px;
+	object-fit: cover;
+}
+
+.about_box, .info_box{
+	width: 50%;
+	padding: 30px;
+}
+
+#gallery .gallery_cards{
+	width: 90%;
+	column-count: 3;
+	column-gap: 0;
+	margin: 0 auto;
+}
+
+#gallery .gallery_cards .item{
+	padding: 5px;
+}
+
+#gallery .gallery_cards img{
+	width: 100%;
+}
+
+#faq summary{
+	background-color: rgb(236, 224, 156);
+	font-size: 18px;
+	text-align: left;
+	padding: 10px 30px;
+}
+
+#faq p{
+	padding: 20px 70px;
+	margin-bottom: 30px;
+}
+
+@media screen and (max-width:478px){
+	body{
+		background-color:white;
+	}
+	#about, #info{
+		flex-direction: column;
+	}
+	#about img, .about_box, #info iframe, .info_box{
+		width: 100%;
+	}
+}
